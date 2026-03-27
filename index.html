@@ -25,7 +25,9 @@
 			background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
 			color: white;
 			padding: 80px 20px;
-			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
 		.container {
@@ -34,15 +36,51 @@
 			padding: 20px;
 		}
 
+		/* Perubahan untuk Foto Profil */
+		.hero {
+			display: flex;
+			align-items: center;
+			gap: 40px;
+			max-width: 900px;
+			width: 100%;
+			text-align: left;
+		}
+
 		.hero h1 {
 			font-size: 2.5em;
-			margin-bottom: 10px;
+			margin-top: 0;
+			margin-bottom: 5px;
 		}
 
 		.hero p {
 			font-size: 1.2em;
 			font-weight: 300;
 			opacity: 0.9;
+			margin-top: 0;
+		}
+
+		/* CSS Cropping Foto Profil */
+		.profile-pic {
+			width: 160px;
+			height: 160px;
+			object-fit: cover; /* Memastikan foto mengisi bingkai tanpa distorsi */
+			border-radius: 50%; /* Membuat foto menjadi lingkaran presisi */
+			aspect-ratio: 1/1; /* Memastikan aspect ratio tetap 1:1 */
+			box-shadow: 0 6px 20px rgba(0,0,0,0.5); /* Menambah kedalaman */
+			border: 4px solid #fff; /* Bingkai putih profesional */
+		}
+
+		/* Responsif untuk Layar Kecil */
+		@media (max-width: 700px) {
+			.hero {
+				flex-direction: column;
+				text-align: center;
+				gap: 20px;
+			}
+			.profile-pic {
+				width: 120px;
+				height: 120px;
+			}
 		}
 
 		.section {
@@ -150,8 +188,11 @@
 
 	<header>
 		<div class="hero">
-			<h1>Miftahul Munir</h1>
-			<p>Human Intelligence, AI Enhanced.</p>
+			<img src="avatar.jpg" alt="Miftahul Munir" class="profile-pic">
+			<div class="hero-text">
+				<h1>Miftahul Munir</h1>
+				<p>Human Intelligence, AI Enhanced.</p>
+			</div>
 		</div>
 	</header>
 
