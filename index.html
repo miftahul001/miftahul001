@@ -1,184 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miftahul Munir | Logic & AI Integration</title>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --bg-light: #f4f7f6;
-        }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Miftahul Munir | Logic & AI Integration</title>
+	<style>
+		:root {
+			--primary-color: #2c3e50;
+			--accent-color: #3498db;
+			--text-color: #333;
+			--bg-light: #f4f7f6;
+		}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-light);
-        }
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			margin: 0;
+			padding: 0;
+			line-height: 1.6;
+			color: var(--text-color);
+			background-color: var(--bg-light);
+		}
 
-        header {
-            background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
+		header {
+			background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+			color: white;
+			padding: 80px 20px;
+			text-align: center;
+		}
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
+		.container {
+			max-width: 900px;
+			margin: auto;
+			padding: 20px;
+		}
 
-        .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+		.hero h1 {
+			font-size: 2.5em;
+			margin-bottom: 10px;
+		}
 
-        .hero p {
-            font-size: 1.2em;
-            font-weight: 300;
-            opacity: 0.9;
-        }
+		.hero p {
+			font-size: 1.2em;
+			font-weight: 300;
+			opacity: 0.9;
+		}
 
-        .section {
-            background: white;
-            padding: 40px;
-            margin-top: -40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+		.section {
+			background: white;
+			padding: 40px;
+			margin-top: -40px;
+			border-radius: 8px;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		}
 
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            display: inline-block;
-            padding-bottom: 5px;
-        }
+		h2 {
+			color: var(--primary-color);
+			border-bottom: 2px solid var(--accent-color);
+			display: inline-block;
+			padding-bottom: 5px;
+			margin-top: 40px;
+		}
 
-        .manifesto-box {
-            background: #e8f4fd;
-            border-left: 5px solid var(--accent-color);
-            padding: 20px;
-            margin: 20px 0;
-        }
+		.manifesto-box {
+			background: #e8f4fd;
+			border-left: 5px solid var(--accent-color);
+			padding: 20px;
+			margin: 20px 0;
+		}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 20px;
+			margin-top: 20px;
+		}
 
-        .card {
-            background: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            transition: transform 0.3s;
-        }
+		.card {
+			background: #fff;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			transition: transform 0.3s;
+		}
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-color);
-        }
+		.card:hover {
+			transform: translateY(-5px);
+			border-color: var(--accent-color);
+		}
+		
+		.featured-card {
+			border-left: 5px solid var(--accent-color);
+			background: #fafafa;
+			margin-top: 20px;
+		}
 
-        .footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.9em;
-            color: #777;
-        }
+		.footer {
+			text-align: center;
+			padding: 40px;
+			font-size: 0.9em;
+			color: #777;
+		}
 
-        .tag {
-            background: #eee;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.85em;
-            margin-right: 5px;
-        }
+		.tag {
+			background: #eee;
+			padding: 4px 10px;
+			border-radius: 4px;
+			font-size: 0.85em;
+			margin-right: 5px;
+			display: inline-block;
+			margin-bottom: 5px;
+		}
 
-        a { color: var(--accent-color); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+		a { color: var(--accent-color); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+
+		/* Custom Buttons */
+		.btn {
+			display: inline-block;
+			background: var(--accent-color);
+			color: white;
+			padding: 8px 16px;
+			border-radius: 4px;
+			margin-top: 15px;
+			margin-right: 10px;
+			font-size: 0.9em;
+			font-weight: bold;
+			transition: background 0.3s, color 0.3s;
+		}
+		
+		.btn:hover {
+			background: #2980b9;
+			text-decoration: none;
+			color: white;
+		}
+		
+		.btn-outline {
+			background: transparent;
+			border: 1px solid var(--accent-color);
+			color: var(--accent-color);
+		}
+		
+		.btn-outline:hover {
+			background: var(--accent-color);
+			color: white;
+		}
+	</style>
 </head>
 <body>
 
-<header>
-    <div class="hero">
-        <h1>Miftahul Munir</h1>
-        <p>Human Intelligence, AI Enhanced.</p>
-    </div>
-</header>
+	<header>
+		<div class="hero">
+			<h1>Miftahul Munir</h1>
+			<p>Human Intelligence, AI Enhanced.</p>
+		</div>
+	</header>
 
-<div class="container">
-    <div class="section">
-        <h2>About Me</h2>
-        <p>
-            I am a logic-driven Programmer focused on <strong>FinTech Automation</strong> and <strong>AI Logic Training</strong>. 
-            I specialize in building transparent, verifiable, and highly optimized trading solutions. 
-            My work is guided by the pursuit of <strong>Objective Truth</strong> in data and code.
-        </p>
+	<div class="container">
+		<div class="section">
+			<h2 style="margin-top: 0;">About Me</h2>
+			<p>
+				I am a logic-driven Programmer focused on <strong>FinTech Automation</strong> and <strong>AI Logic Training</strong>. 
+				I specialize in building transparent, verifiable, and highly optimized trading solutions. 
+				My work is guided by the pursuit of <strong>Objective Truth</strong> in data and code.
+			</p>
 
-        <div class="manifesto-box">
-            <h3>The AI Collaboration Manifesto</h3>
-            <p>I believe in the synergy between human intuition and AI precision. In my workflow:</p>
-            <ul>
-                <li><strong>Logic & Architecture:</strong> 100% human-designed based on my programming expertise.</li>
-                <li><strong>Refinement & Translation:</strong> Collaborative refinement with <strong>Gemini AI</strong>.</li>
-                <li><strong>Integrity:</strong> Every output is manually audited to ensure professional and technical accuracy.</li>
-            </ul>
-        </div>
+			<div class="manifesto-box">
+				<h3 style="margin-top: 0;">The AI Collaboration Manifesto</h3>
+				<p>I believe in the synergy between human intuition and AI precision. In my workflow:</p>
+				<ul>
+					<li><strong>Logic & Architecture:</strong> 100% human-designed based on my programming expertise.</li>
+					<li><strong>Refinement & Translation:</strong> Collaborative refinement with <strong>Gemini AI</strong>.</li>
+					<li><strong>Integrity:</strong> Every output is manually audited to ensure professional and technical accuracy.</li>
+				</ul>
+			</div>
 
-        <h2>Core Expertise</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Trading Systems</h3>
-                <p>Developing custom indicators (Zigzag, ATR) and autonomous bots for the crypto market using JavaScript & C.</p>
-            </div>
-            <div class="card">
-                <h3>Backtesting Engines</h3>
-                <p>Simulating market environments with optimized execution loops (RPM, TPM, RPD management).</p>
-            </div>
-            <div class="card">
-                <h3>AI Logic Evaluation</h3>
-                <p>Training and auditing AI models for better reasoning and state-based memory management.</p>
-            </div>
-        </div>
+			<h2>Featured Project</h2>
+			<div class="card featured-card">
+				<h3 style="margin-top: 0;">🚀 JS Algorithmic Backtesting Engine</h3>
+				<p>A strictly client-side, zero-dependency algorithmic trading engine. Built to process millions of candlestick data points with <strong>0ms network latency</strong> using Distributed Client-Side Computing.</p>
+				<a href="https://miftahul001.github.io/js-algorithmic-backtesting-engine/" class="btn" target="_blank">Try Live Demo</a>
+				<a href="https://github.com/miftahul001/js-algorithmic-backtesting-engine" class="btn btn-outline" target="_blank">View Source Code</a>
+			</div>
 
-        <h2 style="margin-top: 40px;">Technical Stack</h2>
-        <p>
-	<strong>Primary (Expertise):</strong><br>
-            <span class="tag">JavaScript (ES6+)</span>
-            <span class="tag">Node.js</span>
-	<span class="tag">C</span>
-	<span class="tag">Asynchronous Programming</span>
-	<span class="tag">API Integration</span>
-</p>
-<p style="margin-top: 15px;">
-	<strong>Secondary (Supporting Tools):</strong><br>
-	<span class="tag">MySQL/PostgreSQL/NoSQL</span>
-	<span class="tag">PHP (CodeIgniter)</span>
-	<span class="tag">Linux Admin (VPS)</span>
-	<span class="tag">CSS3 Animation</span>
-</p>
-        
-        <h2 style="margin-top: 40px;">Let's Connect</h2>
-        <p>I am open to collaborations in AI Training, Fintech development, and Data Analysis.</p>
-        <p>
-            Email: <a href="mailto:miftahulmunir001@gmail.com">miftahulmunir001@gmail.com</a><br>
-            GitHub: <a href="https://github.com/miftahul001">@miftahul001</a>
-        </p>
-    </div>
+			<h2>Core Expertise</h2>
+			<div class="grid">
+				<div class="card">
+					<h3 style="margin-top: 0;">Trading Systems</h3>
+					<p>Developing custom indicators (Zigzag, ATR) and autonomous bots for the crypto market using JavaScript & C.</p>
+				</div>
+				<div class="card">
+					<h3 style="margin-top: 0;">Backtesting Engines</h3>
+					<p>Simulating market environments with optimized execution loops (RPM, TPM, RPD management).</p>
+				</div>
+				<div class="card">
+					<h3 style="margin-top: 0;">AI Logic Evaluation</h3>
+					<p>Training and auditing AI models for better reasoning and state-based memory management.</p>
+				</div>
+			</div>
 
-    <div class="footer">
-        <p>© 2026 Miftahul Munir. Built with Logic and Gemini AI Assistance.</p>
-    </div>
-</div>
+			<h2>Technical Stack</h2>
+			<p>
+				<strong>Primary (Expertise):</strong><br>
+				<span class="tag">Vanilla JS (ES6+)</span>
+				<span class="tag">Web Workers</span>
+				<span class="tag">IndexedDB</span>
+				<span class="tag">Node.js</span>
+				<span class="tag">C</span>
+				<span class="tag">Client-Side Architecture</span>
+			</p>
+			<p style="margin-top: 15px;">
+				<strong>Secondary (Supporting Tools):</strong><br>
+				<span class="tag">Apache ECharts</span>
+				<span class="tag">MySQL/PostgreSQL</span>
+				<span class="tag">PHP (CodeIgniter)</span>
+				<span class="tag">Linux Admin (VPS)</span>
+			</p>
+			
+			<h2>Let's Connect</h2>
+			<p>I am open to collaborations in AI Training, Fintech development, and Data Analysis.</p>
+			<p>
+				Email: <a href="mailto:miftahulmunir001@gmail.com">miftahulmunir001@gmail.com</a><br>
+				LinkedIn: <a href="https://www.linkedin.com/in/miftahul-munir-1530888b/">miftahul-munir-1530888b</a><br>
+				GitHub: <a href="https://github.com/miftahul001">@miftahul001</a>
+			</p>
+		</div>
+
+		<div class="footer">
+			<p>© 2026 Miftahul Munir. Built with Logic and Gemini AI Assistance.</p>
+		</div>
+	</div>
 
 </body>
 </html>
