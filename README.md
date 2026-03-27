@@ -21,11 +21,17 @@ I believe in the synergy between human intuition and AI precision. In my workflo
 * Designing long-term "State Management" for AI reasoning.
 * Exploring opportunities in AI Model Training and Evaluation.
 
+### 🚀 Featured Project
+**[JS Algorithmic Backtesting Engine](https://miftahul001.github.io/js-algorithmic-backtesting-engine/)**
+A strictly client-side, zero-dependency algorithmic trading engine. Built with Vanilla JS and Web Workers to process millions of candlestick data points with 0ms network latency.
+* [Explore the Repository](https://github.com/miftahul001/js-algorithmic-backtesting-engine)
+
 ---
 
 ### 📫 Connect with me
 * **Email:** miftahulmunir001@gmail.com
-* **Twitter:** [@MiftahulMunir0](https://twitter.com/MiftahulMunir0)
+* **LinkedIn:** [Miftahul Munir](https://www.linkedin.com/in/miftahul-munir-1530888b/)
 * **Facebook:** [Miftahul Munir](https://www.facebook.com/miftahul.munir.79025)
+* **Twitter:** [@MiftahulMunir0](https://twitter.com/MiftahulMunir0)
 
 *"Seeking objective truth through data and code."*
